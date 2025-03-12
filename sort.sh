@@ -1,5 +1,7 @@
 # TODO: make this command dynamic
 
-cut -d',' -f4 withdraw.csv | sort | uniq -c | sort -nr
-
+FILE=$1
+I=$2
+DELIMETER=$3
+cut -d"$DELIMETER" -f"$I" "$FILE" | sort | uniq -c | sort -nr
 
